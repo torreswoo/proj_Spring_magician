@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="fireBallBullet" class="kr.bankspring.study.step03.FireBallBullet"></bean>
+	<bean id="iceStromBullet" class="kr.bankspring.study.step03.IceStromBullet"></bean>
+	<bean id="lightningBullet" class="kr.bankspring.study.step03.LightningBullet"></bean>
+	
+	<!-- 1. 생성자로 주입 -->
+	<bean id="fireBallMagician" class="kr.bankspring.study.step03.Magician">
+		<constructor-arg ref="fireBallBullet"></constructor-arg>
+	</bean>
+	<bean id="iceStromMagician" class="kr.bankspring.study.step03.Magician">
+		<constructor-arg ref="iceStromBullet"></constructor-arg>
+	</bean>
+	<bean id="lightningBallMagician" class="kr.bankspring.study.step03.Magician">
+		<constructor-arg ref="lightningBullet"></constructor-arg>
+	</bean>
+
+
+</beans>

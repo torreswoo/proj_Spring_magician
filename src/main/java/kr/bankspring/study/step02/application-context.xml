@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+
+
+	<bean id="a1" class="kr.bankspring.study.step02.A"></bean>
+	<bean id="a2" class="kr.bankspring.study.step02.A"></bean>
+
+	<!-- 1. 생성자로 주입 -->
+	<bean id="b1" class="kr.bankspring.study.step02.B1">
+		<constructor-arg ref="a1"></constructor-arg>
+	</bean>
+	
+	<!-- 2. setter로 주입 -->
+	<bean id="b2" class="kr.bankspring.study.step02.B2">
+		<property name="a" ref="a2"></property>
+	</bean>
+
+</beans>
+
